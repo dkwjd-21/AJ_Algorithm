@@ -1,5 +1,5 @@
 # 📁 fs 모듈이란?
-Node.js의 fs 모듈은 ***File System(파일 시스템)***을 다룰 수 있도록 도와주는 내장 모듈. <br>
+Node.js의 fs 모듈은 **File System(파일 시스템)**을 다룰 수 있도록 도와주는 내장 모듈. <br>
 파일을 읽고, 쓰고, 수정하고, 삭제할 수 있다. <br><br>
 
 fs.readFileSync() : 파일을 동기적으로 읽는 함수. <br><br>
