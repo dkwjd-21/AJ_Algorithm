@@ -7,7 +7,7 @@ public class Main {
 		// 문자열의 길이 L
 		int L = Integer.parseInt(br.readLine());
 		String s = br.readLine();
-		
+
 		// 해쉬 값
 		long hash = 0;
 		long pow = 1;
@@ -15,9 +15,9 @@ public class Main {
 
 		for(int i=0; i<L; i++) {
 			char tmp = s.charAt(i);
-			
-			hash += ((tmp-'a'+1) * pow) % M;
-			
+
+			hash = (hash + (tmp-'a'+1) * pow) % M;
+
 			pow = (pow * 31) % M;
 		}
 
