@@ -11,7 +11,7 @@ class Solution {
             if(chr == '(') {
                 stack.push(chr);
             } else {
-                if(!stack.isEmpty() && stack.peek() == '(') {
+                if(!stack.isEmpty()) {
                     stack.pop();
                 }  else {
                     answer = false;
