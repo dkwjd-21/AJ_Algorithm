@@ -1,5 +1,4 @@
 class Solution {
-    static int min = Integer.MAX_VALUE;
     // 던전 탐험 횟수
     static int answer = 0;
     
@@ -10,12 +9,8 @@ class Solution {
         
         // 던전 탐험 여부
         boolean[] isDone = new boolean[dungeons.length];
-        for(int i=0; i<dungeons.length; i++) {
-            min = Math.min(min, dungeons[i][0]);
-        }
-        
+        // 탐험 시작
         adventure(k, dungeons, isDone, 0);
-        
         
         return answer;
     }
@@ -24,16 +19,6 @@ class Solution {
     // 던전 탐험 시작 (현재 피로도, 던전배열, 탐험여부, 현재까지 탐험한 던전 수)  
     public void adventure(int k, int[][] dungeons, boolean[] isDone, int cnt) {
         answer = Math.max(answer, cnt);
-        
-        /*
-        if(k<min || cnt == dungeons.length) {
-            // 더 이상 탐험하지 못하는 경우 
-            // 현재 피로도가 '최소 필요 피로도'보다 작을 때
-            // 모든 던전을 탐험했을 때
-            answer = Math.max(answer, cnt);
-            return;
-        }
-        */
         
         for(int i=0; i<dungeons.length; i++) {
             // i번째 던전 확인
